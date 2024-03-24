@@ -1,9 +1,11 @@
 # python image
-FROM python:3.10
+FROM python:3.12
 RUN apt update  
+
+# localdir
 WORKDIR /app
  
-## Pip dependencies
+# pip dependencies
 RUN pip install --upgrade pip
 COPY requirements.txt /app
 RUN pip install -r requirements.txt
